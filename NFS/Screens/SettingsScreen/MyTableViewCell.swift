@@ -20,7 +20,7 @@ private enum Constants {
     static let fontWeight: UIFont.Weight = .bold
 }
 
-class MyTableViewCell: UITableViewCell {
+final class MyTableViewCell: UITableViewCell {
     
     static var identifier: String { "\(Self.self)" }
     

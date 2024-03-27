@@ -18,7 +18,7 @@ protocol ISettingsScreenPresenter {
     func saveUserSettings()
 }
 
-class SettingsScreenPresenter: ISettingsScreenPresenter {
+final class SettingsScreenPresenter: ISettingsScreenPresenter {
     
     var userSettings: UserSettings!
     weak var viewController: ISettingsScreenViewController!

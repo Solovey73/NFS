@@ -11,7 +11,7 @@ protocol RecordsListPresenterDelegate: AnyObject {
     func reloadData()
 }
 
-class RecordsListPresenter {
+final class RecordsListPresenter {
     
     weak var delegate: RecordsListPresenterDelegate?
     

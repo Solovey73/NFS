@@ -17,7 +17,7 @@ struct ResultModel: Codable {
     let date: String
     let time: String
 }
-class DateManager {
+final class DateManager {
     
     private let formatter = DateFormatter()
     

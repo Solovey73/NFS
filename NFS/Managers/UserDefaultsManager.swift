@@ -31,25 +31,7 @@ final class UserDefaultsManager {
         return model
     }
     
-//    func saveResultGame(_ data: ModelResultGame)  {
-//        
-//        var results = featchResultGame()
-//        
-//        results.append(data)
-//        
-//        if  let dataSetting = try? PropertyListEncoder().encode(results) {
-//            defaults.set(dataSetting, forKey: "ResultGame")
-//        }
-//    }
-    
-//    func featchResultGame() -> [ModelResultGame] {
-//        
-//        guard let data = defaults.value(forKey: "ResultGame") as? Data,
-//              let model = try? PropertyListDecoder().decode([ModelResultGame].self, from: data) else {
-//            return []
-//        }
-//        return model
-//    }
+
     
     func createStartSetting() -> UserSettings {
         

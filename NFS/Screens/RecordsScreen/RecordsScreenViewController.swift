@@ -11,7 +11,7 @@ private enum Constants {
     static let recordsTitle = "Рекорды"
 }
 
-class RecordsScreenViewController: UITableViewController {
+final class RecordsScreenViewController: UITableViewController {
 
     private let presenter = RecordsListPresenter()
     

@@ -25,7 +25,7 @@ private enum Constants {
     static let fontWeight: UIFont.Weight = .bold
 }
 
-class PlayerTableViewCell: UITableViewCell {
+final class PlayerTableViewCell: UITableViewCell {
 
     static var identifier: String { "\(Self.self)" }
     

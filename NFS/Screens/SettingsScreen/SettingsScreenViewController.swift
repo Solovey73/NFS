@@ -16,7 +16,7 @@ protocol ISettingsScreenViewController: AnyObject {
     func reloadData()
 }
 
-class SettingsScreenViewController: UITableViewController {
+final class SettingsScreenViewController: UITableViewController {
     
     private var presenter: ISettingsScreenPresenter!
     
