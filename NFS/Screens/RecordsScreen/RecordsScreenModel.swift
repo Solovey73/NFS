@@ -94,11 +94,6 @@ class PlayerTableViewCell: UITableViewCell {
     }
     
     func configure(result: ResultModel) {
-//        if let image = result.image {
-//            playerImage.image = UIImage(data: image)
-//        } else {
-//            playerImage.image = UIImage(named: String.defaultImage)
-//        }
         playerImage.image = StorageManager().loadImage(name: result.image)
         playerName.text = result.playerName
         scoreLabel.text = "Счет: \(result.score)"

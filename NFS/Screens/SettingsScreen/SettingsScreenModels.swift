@@ -93,8 +93,8 @@ enum Car: Codable {
     var CarString: String {
         switch self {
         case .red : return "Ferrari F40"
-        case .green: return "green"
-        case .blue: return "blue"
+        case .green: return "Mazda 626 MPS"
+        case .blue: return "99' Lamborghini Diablo"
         }
     }
 }

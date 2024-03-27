@@ -81,7 +81,9 @@ final class RaceScreenViewController: UIViewController {
         opponentCarTimer?.invalidate()
     }
     private func createsRoad() {
-        timeRoad = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true, block: {  _ in
+        timeRoad = Timer.scheduledTimer(withTimeInterval: 0.4,
+                                        repeats: true,
+                                        block: {  _ in
             let imageRoad = UIImageView()
             imageRoad.image = UIImage(named: "дорога")
             imageRoad.frame = CGRect(x: 0,
@@ -89,7 +91,6 @@ final class RaceScreenViewController: UIViewController {
                                      width: self.view.bounds.width,
                                      height: self.view.bounds.height + 100 )
             self.view.insertSubview(imageRoad, at: 0)
-            //GameConstants.roadDuration
             self.animationBackground(imageRoad, 3.0)
         })
     }
@@ -152,7 +153,15 @@ final class RaceScreenViewController: UIViewController {
         opponentCarTimerTimeInterval = 2.0
     }
     private func setupOpponentCarAnimateDuration() {
-        opponentCarAnimateDuration = 1.0
+        switch userSettings.lavel {
+        case .easy:
+            opponentCarAnimateDuration = 2.5
+        case .middle:
+            opponentCarAnimateDuration = 1.75
+        case .hard:
+            opponentCarAnimateDuration = 1.0
+        }
+        
     }
     private func addOpponentCarTimer() {
         opponentCarTimer = Timer.scheduledTimer(timeInterval: opponentCarTimerTimeInterval,
@@ -203,7 +212,9 @@ final class RaceScreenViewController: UIViewController {
                                                     width: Constants.widthOfCar,
                                                     height: Constants.heightOfCar)
         )
-        opponentCar.image = UIImage(named: Constants.arrayOfOpponentCarsNames.randomElement()!)
+        let opponentCarImage = UIImage(named: Constants.arrayOfOpponentCarsNames.randomElement()!)
+        let opponentCarReverseImage = opponentCarImage?.imageRotatedByDegrees(degrees: 180)
+        opponentCar.image = opponentCarReverseImage
         view.addSubview(opponentCar)
         opponentCars.append(opponentCar)
         
